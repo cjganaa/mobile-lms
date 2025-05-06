@@ -20,10 +20,10 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
                 await database.execAsync('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT UNIQUE NOT NULL, password TEXT NOT NULL);');
                 setIsDbReady(true);
                 //const user = await database.runAsync('INSERT INTO users (username, password) VALUES (?, ?)', 'ganaa', '1234');
-                console.log("successfully");
+                console.log("Холбогдсон");
             } catch (error: any) {
-                console.error('Бааз үүсгэхэд алдаа гарлаа:', error);
-                Alert.alert('Алдаа!', 'Бааз үүсгэх үед алдаа гарлаа.');
+                console.error('Хоболтонд алдаа гарлаа:', error);
+                Alert.alert('Алдаа!', 'БХоболтонд алдаа гарлаа.');
             }
         };
         
@@ -72,7 +72,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
                 <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
                     <Text style={styles.loginButtonText}>Нэвтрэх</Text>
                 </TouchableOpacity>
-                <Link href={"/home"} style={styles.forgotPasswordLink}>
+                <Link href={"/"} style={styles.forgotPasswordLink}>
                     <Text>Нууц үг сэргээх</Text>
                 </Link>
             </View>

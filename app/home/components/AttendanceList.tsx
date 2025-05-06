@@ -1,11 +1,10 @@
-import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import React, { useState, useMemo } from "react";
 import { Link } from 'expo-router';
+import React, { useMemo, useState } from "react";
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { CircularProgress } from 'react-native-circular-progress';
+import { Attendance, SubjectGrades } from '../index';
 import { AttendanceModal } from './AttendanceModal';
 import { GradeModal } from './GradeModal';
-import { SubjectGrades } from '../index';
-import { Attendance } from '../index';
 
 
 type Props = {

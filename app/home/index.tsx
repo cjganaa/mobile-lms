@@ -1,8 +1,8 @@
-import { View, StyleSheet } from 'react-native';
 import React, { useState } from "react";
-import { ProfileCard } from './components/ProfileCard';
-import { NoticeBoard } from './components/NoticeBoard';
+import { StyleSheet, View } from 'react-native';
 import { AttendanceList } from './components/AttendanceList';
+import { NoticeBoard } from './components/NoticeBoard';
+import { ProfileCard } from './components/ProfileCard';
 interface Assignment {
   id: string;
   type: 'Лаборатори' | 'Бие даалт';
@@ -104,7 +104,8 @@ export const attendanceData: Attendance[] = [
   { "id": "67", "subject": "Хиймэл оюун ухаан", "type": "Лекц", "lessonNumber": 4, "present": true, "teacher": "Уянга" },
   { "id": "68", "subject": "Хиймэл оюун ухаан", "type": "Лаб", "lessonNumber": 4, "present": true, "teacher": "Цэцэг"},
   { "id": "69", "subject": "Хиймэл оюун ухаан", "type": "Лекц", "lessonNumber": 5, "present": true, "teacher": "Уянга" },
-  { "id": "70", "subject": "Хиймэл оюун ухаан", "type": "Лаб", "lessonNumber": 5, "present": false, "teacher": "Цэцэг" }
+  { "id": "70", "subject": "Хиймэл оюун ухаан", "type": "Лаб", "lessonNumber": 5, "present": false, "teacher": "Цэцэг" },
+  { "id": "70", "subject": "lksadjfkljd", "type": "Лаб", "lessonNumber": 5, "present": false, "teacher": "Цэцэг" }
 ];
 
 export const gradesData: { [subject: string]: SubjectGrades } = {
@@ -183,6 +184,17 @@ export const gradesData: { [subject: string]: SubjectGrades } = {
   },
   'Хиймэл оюун ухаан': {
     subject: 'Хиймэл оюун ухаан',
+    attendancePercentage: 88,
+    assignments: [
+      { id: '17', type: 'Лаборатори', title: 'Нейрон сүлжээ', grade: 95, maxGrade: 100 },
+      { id: '18', type: 'Бие даалт', title: 'Машин сургалт', grade: 85, maxGrade: 100 },
+    ],
+    exams: [
+      { id: '701', name: 'Эцсийн шалгалт', grade: 90, maxGrade: 100 },
+    ],
+  },
+  'lksadjfkljd': {
+    subject: 'lksadjfkljd',
     attendancePercentage: 88,
     assignments: [
       { id: '17', type: 'Лаборатори', title: 'Нейрон сүлжээ', grade: 95, maxGrade: 100 },
