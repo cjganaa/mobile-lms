@@ -100,7 +100,7 @@ export function AttendanceList({ attendanceData, gradeData }: Props) {
   return (
     <View style={{ flex: 1 }}>
       <Link href={'/menu'} style={{ marginHorizontal: 16, marginBottom: 8 }}>
-        <Text style={styles.sectionTitle}>Мэдээлэл</Text>
+        <Text style={styles.sectionTitle}>Дүнгийн мэдээлэл</Text>
       </Link>
       <FlatList
         data={attendanceData.filter((item, index, self) =>
@@ -121,7 +121,7 @@ export function AttendanceList({ attendanceData, gradeData }: Props) {
                 rotation={0}
                 lineCap="round"
               >
-                {(fill) => (
+                {(fill: number) => (
                   <Text style={styles.progressText}>
                     {fill}%
                   </Text>
